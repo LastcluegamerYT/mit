@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary - MIT School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .diary {
+            margin: 15px 0;
+            padding: 15px;
+            background: #e8f5e9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diary</h1>
+    </header>
+
+    <div class="container">
+        <h2>Today's School Homework</h2>
+        <div class="diary">
+            <strong>Date:</strong> <span id="date"></span>, <strong>Day:</strong> <span id="day"></span>
+            <ul>
+                <li><strong>English:</strong> <span id="english"></span></li>
+                <li><strong>Nepali:</strong> <span id="nepali"></span></li>
+                <li><strong>Math:</strong> <span id="math"></span></li>
+                <li><strong>Science:</strong> <span id="science"></span></li>
+                <li><strong>Computer:</strong> <span id="computer"></span></li>
+                <li><strong>Optional Math:</strong> <span id="optMath"></span></li>
+                <li><strong>Second Science:</strong> <span id="secondScience"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Prashant Pandey. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Populate diary details dynamically
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+        document.getElementById('day').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+
+        // Example data - replace with dynamic content
+        document.getElementById('english').textContent = "Read Chapter 3";
+        document.getElementById('nepali').textContent = "Complete grammar exercises";
+        document.getElementById('math').textContent = "Solve problems 1-10 from Page 45";
+        document.getElementById('science').textContent = "Write a report on photosynthesis";
+        document.getElementById('computer').textContent = "Revise HTML basics";
+        document.getElementById('optMath').textContent = "Practice integration";
+        document.getElementById('secondScience').textContent = "Prepare for lab experiments";
+    </script>
+</body>
+</html>
