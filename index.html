@@ -1,8 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>prashant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT School Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .box {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        .box h2 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<h1> Homework will be coming soon....
+    <header>
+        <h1>MIT School Resources</h1>
+    </header>
+
+    <div class="container">
+        <div class="box" onclick="navigateTo('homework.html')">
+            <h2>Homework</h2>
+        </div>
+        <div class="box" onclick="navigateTo('diary.html')">
+            <h2>Diary</h2>
+        </div>
+        <div class="box" onclick="navigateTo('notes.html')">
+            <h2>Notes</h2>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Prashant Pandey. All Rights Reserved.
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 </body>
 </html>
