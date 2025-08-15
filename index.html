@@ -1,37 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask Her Out</title>
-
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="tenor-gif-embed"
-        data-postid="22885016"
-        data-share-method="host"
-        data-aspect-ratio="1.04918"
-        data-width="100%"
-      >
-        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
-        >from
-        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
-      </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>Will You be my Valentine? 🤗</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
-
-      <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="no1.html">No</a>
-      </div>
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil's Valentine Proposal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #ffd1dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+  }
+  h1 { color: #ff4d88; }
+  p { color: #555; font-style: italic; }
+  .btn { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+  .btn a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    background: #ff4d88;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .btn a:hover { background: #e63e75; transform: scale(1.1); }
+  #move-random { background: #333; }
+  iframe { border: none; border-radius: 10px; margin-bottom: 15px; }
+  footer { margin-top: 20px; font-size: 14px; color: #ff4d88; font-weight: bold; }
+  .made-by { margin-top: 10px; font-size: 12px; color: #888; }
+</style>
+</head>
+<body><audio id="bg-music" loop>
+  <source src="love.mp3" type="audio/mpeg">
+</audio><div class="container" id="page-content">
+  <div id="page1">
+    <iframe src="https://tenor.com/embed/22885016" width="100%" height="250"></iframe>
+    <h1>Will You be my Valentine? 🤗</h1>
+    <p>"Tum meri kahani ka wo hissa ho, jisko padhte hi dil muskurane lage."</p>
+    <div class="btn">
+      <a href="#" onclick="handleChoice('yes', 2)">Yes</a>
+      <a href="#" onclick="handleChoice('no', 3)" id="no-btn">No</a>
     </div>
-  </body>
+    <footer>Sahil with ❤️</footer>
+  </div>
+  <div id="page2" style="display:none;">
+    <iframe src="https://tenor.com/embed/253027946666209433" width="100%" height="250"></iframe>
+    <h1>Hehehehe, I knew it! 😘</h1>
+    <p>"Tum meri duaon ka wo jawaab ho, jo hamesha mere saath rahega."</p>
+    <footer>Sahil with ❤️</footer>
+    <div class="made-by">Made by Prashant Pandey</div>
+  </div>
+  <div id="page3" style="display:none;">
+    <iframe src="https://tenor.com/embed/22050818" width="100%" height="250"></iframe>
+    <h1>Soch le ache se! 🙄</h1>
+    <p>"Dil se dil ka rishta todna asaan nahi hota."</p>
+    <div class="btn">
+      <a href="#" onclick="handleChoice('yes', 2)">Yes</a>
+      <a href="#" onclick="handleChoice('no', 4)" id="no-btn">No</a>
+    </div>
+    <footer>Sahil with ❤️</footer>
+  </div>
+  <div id="page4" style="display:none;">
+    <iframe src="https://tenor.com/embed/15195810" width="100%" height="250"></iframe>
+    <h1>Ek aur baar Soch le! 😣</h1>
+    <p>"Tum na kaho, par meri rooh tumhe chah rahi hai."</p>
+    <div class="btn">
+      <a href="#" onclick="handleChoice('yes', 2)">Yes</a>
+      <a href="#" onclick="handleChoice('no', 5)" id="no-btn">No</a>
+    </div>
+    <footer>Sahil with ❤️</footer>
+  </div>
+  <div id="page5" style="display:none;">
+    <iframe src="https://tenor.com/embed/15974530976611222074" width="100%" height="250"></iframe>
+    <h1>Manja na! Kitna bhav khaegi 😭</h1>
+    <p>"Tere bina adhoora hoon main, tu meri mohabbat ka poora hisa hai."</p>
+    <div class="btn" style="height:200px; position: relative;">
+      <a href="#" onclick="handleChoice('Definitely Yes', 2)">Definitely Yes</a>
+      <a href="#" onclick="handleChoice('Yes', 2)">Yes</a>
+      <a href="#" onclick="handleChoice('Of Course Yes', 2)">Of Course Yes</a>
+      <a href="#" id="move-random">No</a>
+    </div>
+    <footer>Sahil with ❤️</footer>
+  </div>
+</div><script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script><script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmyFzYe9lYRgIAtsU0f2AZWLTztNPTPjE",
+    authDomain: "project-store-44fff.firebaseapp.com",
+    databaseURL: "https://project-store-44fff-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "project-store-44fff",
+    storageBucket: "project-store-44fff.firebasestorage.app",
+    messagingSenderId: "711461666990",
+    appId: "1:711461666990:web:951ba33b6e61ed77736d3f",
+    measurementId: "G-R99SHQ47E1"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  const bgMusic = document.getElementById('bg-music');
+  document.body.addEventListener('click', () => { if(bgMusic.paused) bgMusic.play(); }, { once: true });
+
+  function getDeviceName() {
+    return navigator.userAgent;
+  }
+  function handleChoice(choice, pageNum) {
+    const device = getDeviceName().replace(/\./g, "_");
+    const timestamp = new Date().toISOString();
+    db.ref('responses/' + device).push({ choice: choice, time: timestamp });
+    showPage(pageNum);
+  }
+  function showPage(num) {
+    document.querySelectorAll('#page-content > div').forEach(el => el.style.display = 'none');
+    document.getElementById('page' + num).style.display = 'block';
+  }
+  function moveRandomEl(elm) {
+    const maxX = window.innerWidth - elm.offsetWidth - 20;
+    const maxY = window.innerHeight - elm.offsetHeight - 20;
+    elm.style.position = "absolute";
+    elm.style.top = Math.floor(Math.random() * maxY) + "px";
+    elm.style.left = Math.floor(Math.random() * maxX) + "px";
+  }
+  const moveRandom = document.querySelector("#move-random");
+  moveRandom.addEventListener("click", function (e) { e.preventDefault(); moveRandomEl(e.target); handleChoice('no', 5); });
+</script></body>
 </html>
