@@ -1,52 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe5e5;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #444;
+.container .tenor-gif-embed {
+  max-width: 200px;
 }
 
-.homework {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 5px solid #4CAF50;
-    background-color: #f1f1f1;
-    border-radius: 5px;
+.container .btn {
+  display: flex;
+  gap: 25px;
 }
 
-.date {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c7cbf;
-}
-
-hr {
-    border: none;
-    border-top: 2px solid #ddd;
-    margin: 20px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    background: #2c7cbf;
-    color: #fff;
-    font-size: 14px;
-    border-radius: 0 0 8px 8px;
+.btn a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
 }
